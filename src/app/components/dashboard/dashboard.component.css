@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200);
+
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 100vh;
+}
+
+@media only screen and (max-device-width: 480px) {
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 40vh;
+}
+}
+
+div[class^="metro"]{
+	margin: 10px 10px 10px 10px;
+	height: 95px;
+	position: relative;
+	cursor: pointer;
+	transition: all .4s ease;
+    border: solid 2px transparent;
+}
+div[class^="metro"]:hover{
+	border: solid 2px mintcream;
+}
+div[class^="metro"]:active{
+	transform: scale(.98,.98);
+}
+.metro-big{
+    width: 196px;
+}
+
+
+
+
+.label{
+	position: absolute;
+	color: white;
+	font: 500 15px sans-serif;
+	left: 10px;
+ 
+}
+.bottom{bottom: 5px;}
+
+.chat{background: #df0024;}
+.calendar{
+  background: #ffc107;
+}
+
+.video{background: #8b0189;}
+
+.music{
+  background: #ffffff;
+  animation: flip 6s linear infinite;
+  transform: rotateX(0deg);
+}
+.games{background: #00ff00;}
+
+
+div[class^="icon"]{
+	width: 45px;
+	height: 45px;
+	margin: 20px auto;
+	background-size: 45px 45px;
+}
+.icon-chat{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Other-Mail-alt-Metro-icon.png');}
+.icon-video{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Folders-OS-My-Videos-Metro-icon.png');}
+.icon-music{
+    background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Folders-OS-User-No-Frame-Metro-icon.png');
+}
+.icon-store{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Microsoft-Store-Metro-icon.png');}
+
+
+@keyframes flip{
+  0%{
+    transform: rotateX(0deg);
+  }
+  15%{
+    transform: rotateX(360deg);  
+  }
+  100%{
+    transform: rotateX(360deg); 
+  }
+}
+
+
+
+@keyframes fade{
+  0%{
+    opacity: 0; 
+  }
+  10%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
+}
