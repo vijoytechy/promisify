@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment.prod';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import { PromiseVerseComponent } from './components/promise-verse/promise-verse.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './components/layout/footer/footer.component';
     DashboardComponent,
     ProfileComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PromiseVerseComponent
   ],
   imports: [
     BrowserModule,

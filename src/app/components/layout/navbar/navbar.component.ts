@@ -9,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   constructor(public auth: AuthService) { }
-
+  loginCheck: any;
   ngOnInit(): void {
+    this.loginCheck = this.auth.isLoggedIn;
+    this.loggedOut();
   }
 
+
+  loggedOut() {
+    this.auth.SignOut();
+  }
 }

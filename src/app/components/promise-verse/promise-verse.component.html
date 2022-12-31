@@ -1,0 +1,47 @@
+<app-dashboard></app-dashboard>
+<div class="container mb-2" [hidden]="UserPromises">
+
+  <form class="row g-3 mt-5">
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually-hidden">Email</label>
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter Your Name">
+    </div>
+    <div class="col-auto">
+      <label for="name" class="visually-hidden">Name</label>
+      <input type="text" #name (keyup.enter)="getName(name.value)" (blur)="getName(name.value); name.value='' "
+        class="form-control" id="name" placeholder="Name">
+    </div>
+    <div class="col-auto">
+
+    </div>
+
+  </form>
+
+  <div class="alert alert-danger" role="alert" [hidden]="!error">
+    {{error}}
+  </div>
+
+
+
+</div>
+
+
+
+<div class="card container mt-3 container-sm shadow p-3 mb-5 bg-body rounded" style="max-width: 540px;"
+  [hidden]="!UserPromises" *ngFor="let userpromise of UserPromises">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="../../../assets/img/logo.png" style="width: 10rem;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Hello ,{{userpromise.username}}</h5>
+        <h5 class="card-title">{{userpromise.ref}}</h5>
+        <p class="card-text">{{userpromise.verse}}</p>
+        <p class="card-text"><small class="text-muted"><strong>Happy New Year 2023 </strong></small></p>
+        <p class="card-text"><small class="text-muted"><strong>{{userpromise.generated|date:'medium'}} </strong></small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

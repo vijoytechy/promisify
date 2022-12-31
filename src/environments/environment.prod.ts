@@ -10,8 +10,7 @@ export const environment = {
     messagingSenderId: "1031435174273",
     appId: "1:1031435174273:web:4c05b1692656c8db0fe880",
     measurementId: "G-0MJ25746V9",
-    databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
+    databaseURL: "https://promisify-b1cac-default-rtdb.europe-west1.firebasedatabase.app"
   }
 };
 

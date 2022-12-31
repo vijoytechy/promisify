@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   userData: any;
+  currentUser!: string;
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router,
@@ -17,13 +18,18 @@ export class AuthService {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
+        this.currentUser = user.uid;
         JSON.parse(localStorage.getItem('user')!);
       } else {
-        localStorage.removeItem('user');
+        localStorage.setItem('user', 'null');
         JSON.parse(localStorage.getItem('user')!);
       }
     });
+
+
+
   }
+
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
@@ -53,4 +59,6 @@ export class AuthService {
       this.router.navigate(['login']);
     });
   }
+
+
 }
