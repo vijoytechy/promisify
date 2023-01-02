@@ -1,3 +1,4 @@
+import { ContactComponent } from './components/contact/contact.component';
 import { PromiseVerseComponent } from './components/promise-verse/promise-verse.component';
 import { AuthGuard } from './shared/auth.guard';
 import { SecureInnerPagesGuard } from './shared/secure-inner-pages.guard';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   {
     path: 'promise-verse', component: PromiseVerseComponent, canActivate: [AuthGuard]
-  }
+  },
+  { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

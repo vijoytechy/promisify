@@ -18,6 +18,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { PromiseVerseComponent } from './components/promise-verse/promise-verse.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PromiseVerseComponent } from './components/promise-verse/promise-verse.
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    PromiseVerseComponent
+    PromiseVerseComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
